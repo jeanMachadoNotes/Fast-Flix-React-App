@@ -1,6 +1,6 @@
 # Fast Flix - Movie Search App
 
-This project was created with react on the front end and powered by the OMDb API.
+This project was created with React on the front end and powered by the OMDb API.
 
 ## Technologies used:
 
