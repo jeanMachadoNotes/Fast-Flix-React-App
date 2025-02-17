@@ -57,7 +57,7 @@ function App() {
           <p>{error}</p>
         </div>
         <footer className="footer">
-          <p>API-Powered Awesomeness ⚡ | Built with React | © 2025 JM</p>
+          <p>API-Powered Awesomeness ⚡ | Built with React | © 2025 <a href="https://www.jeanmachado.net" rel="noreferrer" target="_blank">JM</a> | <a rel="noreferrer" target="_blank" href="https://github.com/jeanMachadoNotes/Fast-Flix-React-App">GitHub</a></p>
         </footer>
     </div>
   );
