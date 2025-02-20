@@ -9,3 +9,8 @@ OMDb API stands for Open Movie Database API, a free web service that provides mo
 * Front-End: React - https://react.dev/
 * API: OMDb - https://www.omdbapi.com/
 * HTTP: Axios - https://www.npmjs.com/package/axios#axios-api
+
+### Try it out here:
+* Link - https://fast-flix-react-app.vercel.app/
+
+<img width="915" alt="Screenshot 2025-02-20 at 7 13 03 AM" src="https://github.com/user-attachments/assets/19637d8f-62db-4583-a30e-0d589f3348f0" />
