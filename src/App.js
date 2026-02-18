@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const API_KEY = "ed2d6fb9";
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 function App() {
   const [movie, setMovie] = useState(null);
@@ -34,8 +34,20 @@ function App() {
     <div className="wrapper">
       <div className="header">
         <h1>Flick Facts – Find Movie Info Fast</h1>
-        <input type="text" placeholder="Enter movie title" value={title} onChange={(enteredTitle) => setTitle(enteredTitle.target.value)} />
-        <button onClick={fetchMovie}>Search</button>        
+        <input 
+          type="text" 
+          placeholder="Enter movie title" 
+          value={title} 
+          onChange={(enteredTitle) => setTitle(enteredTitle.target.value)}
+          onKeyDown={(event) => {
+            if (event.key === "Enter") {
+              fetchMovie();
+            }
+          }} 
+        />
+
+        <button onClick={fetchMovie}>Search</button>
+                
       </div>
       <div className="movie-wrapper">
         {movie && (
@@ -57,7 +69,7 @@ function App() {
           <p>{error}</p>
         </div>
         <footer className="footer">
-          <p>API-Powered Awesomeness ⚡ | Built with React | © 2025 <a href="https://www.jeanmachado.net" rel="noreferrer" target="_blank">JM</a> | <a rel="noreferrer" target="_blank" href="https://github.com/jeanMachadoNotes/Fast-Flix-React-App">GitHub</a></p>
+          <p>API-Powered Awesomeness ⚡ | Built with React | © 2025 <a href="https://www.jeanmachado.net" rel="noreferrer" target="_blank">JMCreative</a> | <a rel="noreferrer" target="_blank" href="https://github.com/jeanMachadoNotes/Fast-Flix-React-App">GitHub</a></p>
         </footer>
     </div>
   );
