@@ -33,7 +33,8 @@ function App() {
   return (
     <div className="wrapper">
       <div className="header">
-        <h1>Flick Facts – Find Movie Info Fast</h1>
+        <h1>Flick Facts</h1>
+        <p>Browse, search, and discover movies instantly.</p>
         <input 
           type="text" 
           placeholder="Enter movie title" 
@@ -49,22 +50,22 @@ function App() {
         <button onClick={fetchMovie}>Search</button>
                 
       </div>
-      <div className="movie-wrapper">
-        {movie && (
-          <div className="movie-details">
-            <div className="movie-header">
-              <h2>{movie.Title}</h2>
-              <p>Released in {movie.Year}</p>
-              <p>Directed by {movie.Director}</p>
-              <p>Staring {movie.Actors}</p>
-              <p className="movie-description">{movie.Plot}</p>
+      {movie && (
+        <div className="movie-wrapper">
+            <div className="movie-details">
+              <div className="movie-header">
+                <h2>{movie.Title}</h2>
+                <p>Released in {movie.Year}</p>
+                <p>Directed by {movie.Director}</p>
+                <p>Staring {movie.Actors}</p>
+                <p className="movie-description">{movie.Plot}</p>
+              </div>
+              <div className="movie-poster">
+                <img src={movie.Poster} alt={movie.Title}/>
+              </div>
             </div>
-            <div className="movie-poster">
-              <img src={movie.Poster} alt={movie.Title}/>
-            </div>
-          </div>
-        )}
-      </div>
+        </div>
+      )}
         <div className="error-message">
           <p>{error}</p>
         </div>
